@@ -10,11 +10,11 @@ db = SQLAlchemy(application)
 class Todo(db.Model): 
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(200), nullable=False)
-    date_created = db.Column(db.DateTime, default=datetime.utcnow)
+    date_created = db.Column(db.DateTime, default=datetime.now)
 
     def __repr__(self):
         return '<Task %r>' % self.id
-    
+
 # with app.app_context():
 #         db.create_all()
 
@@ -29,7 +29,7 @@ def index():
             db.session.commit()
             return redirect('/') 
         except: 
-            return 'There was an issue adding your task.'
+            return 'there was an issue adding your task.'
 
     else:
         tasks = Todo.query.order_by(Todo.date_created).all()
@@ -44,7 +44,7 @@ def delete(id):
         db.session.commit()
         return redirect('/')
     except:
-        return 'There was a problem deleting that task.'
+        return 'there was a problem deleting that task.'
 
 @application.route('/update/<int:id>', methods=['GET', 'POST'])
 def update(id):
@@ -57,7 +57,7 @@ def update(id):
             db.session.commit()
             return redirect('/')
         except: 
-            return 'There was an issue updating your task.'
+            return 'there was an issue updating your task.'
     else: 
         return render_template('update.html', task=task)
 

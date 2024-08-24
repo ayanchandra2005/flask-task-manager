@@ -1,35 +1,152 @@
+/* Main CSS Styles */
+
+/* Base Styles */
 body, html {
     margin: 0;
-    font-family: sans-serif;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background-color: #24503f;
+    color: #ffffff;
 }
 
+/* Content Area */
 .content {
-    margin: 0 auto;
-    width: 400px;
+    margin: 20px auto;
+    width: 50%;
+    background-color: #3f8878;
+    padding: 20px;
+    box-shadow: 0 0 50px rgb(0, 0, 0);
+    border-radius: 20px;
+    margin-top: 175px;
 }
 
-table, td, th {
-    border: 1px solid #aaa;
+.footer {
+    margin: 20px auto;
+    background-color: #ffffff;
+    width: 20%;
+    padding: 5px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    border-radius: 20px;
+    margin-top: 200px;
+    text-align: center;
+    color: #3f8878;
+    font-family: Montserrat;
+    font-weight: 600;
 }
 
+/* Table Styles */
 table {
-    border-collapse: collapse;
     width: 100%;
+    margin-top: 10px;
+    table-layout: fixed; /* This makes the columns more uniform */
+}
+
+th, td {
+    border: none;
+    padding: 5px;
+    text-align: center;
 }
 
 th {
-    height: 30px;
+    height: 20px;
+    background-color: #2a554c;
+    border-radius: 10px;
+
 }
 
 td {
-    text-align: center;
-    padding: 5px;
+    background-color: #367064;
+    height: 50px;
+    border-radius: 20px;
+
 }
 
+/* Form Styles */
 .form {
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-#content {
-    width: 70%;
+input[type="text"] {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: calc(100% - 200px); /* Adjust width to account for padding */
+    box-sizing: border-box; /* Include padding in width */
+    border: none;
+    border-radius: 20px;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    margin-top: 5px;
+    width: calc(100% - 520px); /* Adjust width to account for padding */
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+input[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+/* Link Styles */
+a {
+    color: #4A90E2;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* Header Styles */
+h1, h2, h3 {
+    font-family: 'Matemasie';
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 3px 5px;
+    background-color: #4A90E2;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 22px;
+}
+
+.btn-delete {
+    background-color: #e03e3e; /* Red for delete */
+    margin-right: 10px;
+}
+
+.btn-update {
+    background-color: #3cc97e; /* Green for update */
+    margin-left: 10px;
+
+}
+
+.btn:hover {
+    opacity: 0.75;
 }
