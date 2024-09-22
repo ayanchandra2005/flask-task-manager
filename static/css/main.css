@@ -149,13 +149,15 @@ h1 {
 /* Button Container */
 .btn-container {
     display: flex;
-    justify-content: center;
-    gap: 10px; /* Add space between buttons */
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
 }
 
 /* Ensure buttons are side by side */
 .btn {
-    padding: 10px 15px;
+    padding: 5px 10px;
     font-size: 14px;
     background-color: #4A90E2;
     border: none;
