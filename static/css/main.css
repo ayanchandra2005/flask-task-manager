@@ -151,8 +151,8 @@ h1 {
 /* Keep the layout the same, just scale it down for smaller screens */
 @media (max-width: 768px) {
     .content {
-        width: 90%; /* Ensure content takes up most of the width on mobile */
-        margin-top: 50px; /* Adjust top margin */
+        width: 90%;
+        margin-top: 50px;
     }
 
     table {
@@ -161,21 +161,35 @@ h1 {
 
     th, td {
         padding: 10px;
-        font-size: 14px; /* Scale down text slightly on smaller screens */
+        font-size: 14px;
     }
 
     input[type="text"] {
-        width: 100%; /* Make text input full width on mobile */
-        font-size: 14px; /* Scale down text size for input field */
+        width: 100%;
+        font-size: 14px;
     }
 
     input[type="submit"] {
-        width: 100%; /* Make the submit button full width on mobile */
-        font-size: 14px; /* Scale down button text */
+        width: 100%;
+        font-size: 14px;
     }
 
     .btn {
-        font-size: 14px; /* Scale down button text */
+        font-size: 14px;
+        display: inline-block;
+        width: auto;
+    }
+
+    /* Ensure buttons are side by side */
+    .btn-delete, .btn-update {
+        display: inline-block;
+        width: auto;
+    }
+
+    .footer {
+        width: auto;
+        font-size: 12px;
+        padding: 5px;
     }
 }
 
