@@ -52,14 +52,12 @@ th {
     height: 20px;
     background-color: #2a554c;
     border-radius: 10px;
-
 }
 
 td {
     background-color: #367064;
     height: 50px;
     border-radius: 20px;
-
 }
 
 /* Form Styles */
@@ -144,9 +142,66 @@ h1 {
 .btn-update {
     background-color: #3cc97e; /* Green for update */
     margin-left: 10px;
-
 }
 
 .btn:hover {
     opacity: 0.75;
+}
+
+/* Responsiveness for Mobile */
+@media (max-width: 768px) {
+    .content {
+        width: 90%; /* Make content take up more width on smaller screens */
+        margin-top: 50px; /* Adjust top margin to make better use of space */
+    }
+
+    input[type="text"] {
+        width: calc(100% - 50px); /* Make input fields wider for smaller screens */
+    }
+
+    input[type="submit"] {
+        width: calc(100% - 100px); /* Ensure the button doesn't overflow */
+    }
+
+    .footer {
+        width: 80%; /* Ensure the footer scales properly */
+    }
+
+    h1 {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+
+    /* Make the table rows stack for mobile */
+    table, th, td {
+        display: block;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    th {
+        background-color: #2a554c;
+    }
+
+    td {
+        background-color: #367064;
+    }
+}
+
+/* For Larger Screens */
+@media (min-width: 769px) {
+    .content {
+        width: 50%;
+    }
+
+    input[type="text"] {
+        width: calc(100% - 200px); /* Keep input fields narrower on large screens */
+    }
+
+    input[type="submit"] {
+        width: calc(100% - 520px); /* Button size for larger screens */
+    }
 }
