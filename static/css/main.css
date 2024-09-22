@@ -119,6 +119,7 @@ h1 {
 }
 
 /* Button Styles */
+/*
 .btn {
     display: inline-block;
     padding: 10px 15px;
@@ -135,13 +136,42 @@ h1 {
 }
 
 .btn-delete {
-    background-color: #e03e3e; /* Red for delete */
+    background-color: #e03e3e; 
     margin-right: 10px;
 }
 
 .btn-update {
-    background-color: #3cc97e; /* Green for update */
+    background-color: #3cc97e; 
     margin-left: 10px;
+}
+*/
+
+/* Button Container */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Add space between buttons */
+}
+
+/* Ensure buttons are side by side */
+.btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #4A90E2;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    width: auto; /* Ensure buttons are auto-width */
+    color: white;
+}
+
+.btn-delete {
+    background-color: #e03e3e;
+}
+
+.btn-update {
+    background-color: #3cc97e;
 }
 
 .btn:hover {
@@ -187,7 +217,7 @@ h1 {
     }
 
     .footer {
-        width: auto;
+        width: 33.33%;
         font-size: 12px;
         padding: 5px;
     }
