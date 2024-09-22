@@ -21,6 +21,7 @@ body, html {
     margin-top: 175px;
 }
 
+/* Adjusting the footer */
 .footer {
     margin: 20px auto;
     background-color: #ffffff;
@@ -121,17 +122,17 @@ h1 {
 /* Button Styles */
 .btn {
     display: inline-block;
-    padding: 3px 5px;
+    padding: 10px 15px;
     background-color: #4A90E2;
     color: white;
     text-align: center;
     text-decoration: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-family: "Jersey 10", sans-serif;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .btn-delete {
@@ -160,7 +161,7 @@ h1 {
     }
 
     input[type="submit"] {
-        width: calc(100% - 100px); /* Ensure the button doesn't overflow */
+        width: 100%; /* Full width button on smaller screens */
     }
 
     .footer {
@@ -171,15 +172,16 @@ h1 {
         font-size: 28px; /* Adjust font size for smaller screens */
     }
 
-    /* Make the table rows stack for mobile */
+    /* Stack table rows for better readability on mobile */
     table, th, td {
         display: block;
+        text-align: left;
+        padding: 10px;
     }
 
     th, td {
-        padding: 10px;
-        text-align: left;
         margin-bottom: 10px;
+        padding: 10px;
     }
 
     th {
@@ -188,6 +190,13 @@ h1 {
 
     td {
         background-color: #367064;
+    }
+
+    /* Adjust button size */
+    .btn {
+        width: 100%; /* Full width buttons on mobile */
+        font-size: 18px;
+        padding: 10px;
     }
 }
 
