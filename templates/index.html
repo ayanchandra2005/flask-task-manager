@@ -22,9 +22,8 @@
         {% for task in tasks %}
             <tr>
                 <td>{{ task.content }}</td>
-                <td>{{ task.date_created.strftime('%a, %b %d') | lower }}</td> <!-- Formatted date in lowercase -->
+                <td>{{ task.date_created.strftime('%a, %b %d') | lower }}</td> 
                 <td>
-                    <!-- Wrap buttons in a container for Flexbox styling -->
                     <div class="btn-container">
                         <a href="/delete/{{task.id}}" class="btn btn-delete">delete</a>
                         <a href="/update/{{task.id}}" class="btn btn-update">update</a>

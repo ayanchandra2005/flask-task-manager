@@ -8,6 +8,7 @@ body, html {
     font-size: 16px;
     background-color: #24503f;
     color: #ffffff;
+    cursor: crosshair;
 }
 
 /* Content Area */
@@ -42,7 +43,7 @@ body, html {
 table {
     width: 100%;
     margin-top: 10px;
-    table-layout: fixed; /* This makes the columns more uniform */
+    table-layout: fixed; 
 }
 
 th, td {
@@ -83,13 +84,15 @@ input[type="text"] {
 input[type="submit"] {
     padding: 10px;
     margin-top: 5px;
-    width: calc(100% - 520px); /* Adjust width to account for padding */
+    /* width: calc(100% - 520px);  */
+    width: min-content;
     box-shadow: 0 0 5px rgb(0, 0, 0);
     background-color: #4a90e2;
     color: white;
     border: none;
     border-radius: 20px;
-    cursor: pointer;
+    /* cursor: pointer; */
+    cursor: cell;
     font-family: Montserrat;
     font-weight: 600;
 }
@@ -133,15 +136,15 @@ h1 {
 /* Ensure buttons are side by side */
 .btn {
     padding: 5px 10px;
-    font-size: 14px;
+    font-size: 1rem;
     background-color: #4A90E2;
     border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    border-radius: 5px;
+    cursor: cell;
     text-align: center;
-    width: 45%;
+    width: 40%;
     color: white;
-    table-layout: fixed;
+    /* table-layout: fixed; */
 }
 
 .btn-delete {
@@ -158,6 +161,10 @@ h1 {
 
 /* Keep the layout the same, just scale it down for smaller screens */
 @media (max-width: 768px) {
+    html {
+        font-size: 12px; /* Slightly smaller base font size on smaller screens */
+    }
+
     .content {
         width: 90%;
         margin-top: 50px;
@@ -213,5 +220,9 @@ h1 {
 
     input[type="submit"] {
         width: calc(100% - 520px); /* Button size for larger screens */
+    }
+
+    html {
+        font-size: 16px; /* Default font size for desktops */
     }
 }
